@@ -106,7 +106,7 @@ const getResult = (validNumbers) => {
 };
 
 const validNumbers = getValidNumbers(numbersPositions, matriz);
-// console.table(validNumbers);
+
 const result = getResult(validNumbers);
-console.log(result);
-//535078
+
+console.log(`Day 3 - Result of part 1 => ${result}`);
