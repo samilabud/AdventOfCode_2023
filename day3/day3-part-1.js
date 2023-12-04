@@ -43,7 +43,7 @@ const getNumbersOfPositions = (matriz) => {
 };
 
 const numbersPositions = getNumbersOfPositions(matriz);
-console.log(numbersPositions);
+
 const getAroundValues = (matriz, row, col) => {
   const leftPos = matriz[row][col - 1];
   const topPos = matriz[row - 1] ? matriz[row - 1][col] : false;
