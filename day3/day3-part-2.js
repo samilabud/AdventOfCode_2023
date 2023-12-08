@@ -89,10 +89,6 @@ const getAroundSymbols = (aroundValues) => {
   }
 };
 
-// console.log({ numbersPositions });
-// const aroundValues = getAroundValues(matriz, 0, 1);
-// console.log({ aroundValues });
-
 const getValidNumbers = (numbersPositions, matriz) => {
   const validNumbers = {};
   for (let number in numbersPositions) {
@@ -103,7 +99,6 @@ const getValidNumbers = (numbersPositions, matriz) => {
       const aroundValues = getAroundValues(matriz, row, pos);
       const symbolAround = getAroundSymbols(aroundValues);
       if (symbolAround) {
-        // console.log(symbolAround, number, validNumbers[symbolAround]);
         if (validNumbers[symbolAround]) {
           if (!validNumbers[symbolAround].includes(number)) {
             validNumbers[symbolAround].push(number);
@@ -126,7 +121,6 @@ const getResult = (validNumbers) => {
       const powerOfGear = valuesOfGear
         .map((power) => Number(power.split("-")[0]))
         .reduce((accum, current) => accum * current);
-      // console.log(powerOfGear, valuesOfGear);
       result += powerOfGear;
     }
   });
@@ -134,7 +128,6 @@ const getResult = (validNumbers) => {
 };
 
 const validNumbers = getValidNumbers(numbersPositions, matriz);
-// console.log(validNumbers);
 
 const result = getResult(validNumbers);
 
